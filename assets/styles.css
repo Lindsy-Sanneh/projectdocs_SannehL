@@ -1,63 +1,134 @@
-/* =========================
-   Tailwind Custom Utilities
-   ========================= */
-
-/* Fonts */
-@layer utilities {
-  .font-funnel { font-family: 'Funnel Display', 'Montserrat', sans-serif; }
-  .font-script { font-family: 'Pinyon Script', cursive; }
-  .font-dm { font-family: 'DM Serif Text', serif; }
+/* ================= FONTS ================= */
+.font-funnel {
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* Fullname */
-.fullname {
-  @apply font-funnel font-semibold text-[2.4rem] text-[#7a001f] leading-none mb-1;
+.font-script {
+  font-family: 'Pinyon Script', cursive;
 }
 
-/* Class number */
-.classnr {
-  @apply font-funnel font-light text-[1rem] text-[#7a001f]/90 mt-1;
+.font-dm {
+  font-family: 'DM Serif Text', serif;
 }
 
-/* Week navigation */
-.week-nav {
-  @apply flex justify-center gap-4 mt-5 list-none p-0;
-}
-
-.week-nav a {
-  @apply px-4 py-2 rounded-lg bg-white/20 text-white font-light backdrop-blur-sm transition hover:bg-pink-300 hover:text-[#7a001f];
-}
-
-.week-nav a.active {
-  @apply bg-pink-300 text-[#7a001f] font-semibold;
-}
-
-/* Main container */
-main {
-  @apply max-w-[900px] mx-auto px-5 py-12 text-center;
-}
-
-/* Titles */
-.h1-plain {
-  @apply block font-funnel font-light text-[2rem] text-[#ffe3ef] mb-6;
-}
-
-.h1-script {
-  @apply block font-script text-[5.3rem] text-[#7a001f] mt-[-10px] mb-6;
-}
-
-/* Lead text */
-.lead {
-  @apply font-dm italic text-[1.3rem] max-w-[780px] mx-auto leading-[1.7] mb-8;
-}
-
-/* Two columns (hidden by default) */
-.two-columns {
-  @apply hidden;
-}
-
-/* Body background */
+/* ================= LAYOUT ================= */
 body {
-  @apply m-0 p-0 text-white bg-fixed;
-  background: radial-gradient(circle at top left, #ffd6e6, #7a001f);
+  background-color: #F4C9D6;
+  color: #3E2723;
+  font-family: 'Montserrat', sans-serif; /* font-funnel */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 3rem;   /* px-12 */
+  padding-right: 3rem;
+  padding-top: 2rem;    /* py-8 */
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.site-title {
+  font-size: 1.25rem;    /* text-xl */
+  font-weight: 600;      /* font-semibold */
+  line-height: 1;        /* leading-none */
+}
+
+.site-subtitle {
+  font-size: 0.875rem;   /* text-sm */
+  font-weight: 300;      /* font-light */
+  opacity: 0.7;
+}
+
+.btn-week {
+  padding-left: 1.25rem;   /* px-5 */
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;     /* py-2 */
+  padding-bottom: 0.5rem;
+  border-radius: 9999px;   /* rounded-full */
+  background-color: #3E2723;
+  color: #F4C9D6;
+  font-size: 0.875rem;     /* text-sm */
+  font-weight: 300;        /* font-light */
+  border: 1px solid #3E2723;
+  transition: all 0.3s ease-out;
+}
+
+.btn-week:hover {
+  background-color: transparent;
+  color: #3E2723;
+  transform: translateY(-0.25rem);  /* -translate-y-1 → -0.25rem */
+}
+
+.btn-action {
+  padding-left: 1.5rem;    /* px-6 */
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;    /* py-3 */
+  padding-bottom: 0.75rem;
+  border-radius: 9999px;   /* rounded-full */
+  background-color: #F4C9D6;
+  color: #3E2723;
+  font-size: 0.875rem;     /* text-sm */
+  font-weight: 300;        /* font-light */
+  border: 1px solid #F4C9D6;
+  transition: all 0.3s ease-out;
+}
+
+.btn-action:hover {
+  background-color: transparent;
+  color: #F4C9D6;
+  transform: translateY(-0.25rem);  /* -translate-y-1 */
+}
+
+.hero {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-left: 1.5rem;   /* px-6 */
+  padding-right: 1.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;   /* text-2xl */
+  font-weight: 300;    /* font-light */
+  margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.hero-title {
+  font-family: 'Pinyon Script', cursive; /* font-script */
+  font-size: 7rem;       /* text-[7rem] */
+  line-height: 1;        /* leading-none */
+}
+
+.section-dark {
+  background-color: #3E2723;
+  color: #F4C9D6;
+  padding-left: 3rem;    /* px-12 */
+  padding-right: 3rem;
+  padding-top: 6rem;     /* py-24 */
+  padding-bottom: 6rem;
+}
+
+.section-actions {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;   /* mb-16 */
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;    /* text-xs */
+  opacity: 0.7;
 }

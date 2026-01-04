@@ -1,0 +1,69 @@
+/* ================= WEEK CONTENT (ALGEMEEN) ================= */
+
+/* hoofdcontainer van elke week */
+.week {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 6rem;
+}
+
+/* ================= TITELS ================= */
+
+.week-subtitle {
+  font-family: inherit;
+  font-weight: 300;
+  font-size: 1.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.week-title {
+  font-family: 'DM Serif Text', serif;
+  font-style: italic;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ================= LAYOUT ================= */
+
+.week-content {
+  display: flex;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+/* ================= MEDIA / CAROUSEL ================= */
+
+.week-media {
+  flex: 1;
+}
+
+.week-media img {
+  width: 100%;
+  display: block;
+  border-radius: 1.25rem;
+}
+
+/* ================= TEKST ================= */
+
+.week-text {
+  flex: 1;
+  font-family: inherit;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.week-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .week-content {
+    flex-direction: column;
+  }
+
+  .week-title {
+    font-size: 2.4rem;
+  }
+}
